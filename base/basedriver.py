@@ -11,7 +11,7 @@ class BaseDriver:
         while match == False:
             lastcount = pagelength
             time.sleep(4)
-            pagelength = self.driver.execute_script("window.scrollTo(0,document.body.scrollheight);var pagelength=document.body.scrollheigth;return document.body.scrollHeight")
+            pagelength = self.driver.execute_script("window.scrollTo(0,document.body.scrollHeight);var pagelength=document.body.scrollHeigth;return document.body.scrollHeight")
             if lastcount == pagelength:
                 match = True
         time.sleep(4)
